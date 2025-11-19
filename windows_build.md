@@ -1,7 +1,7 @@
 # Bitcoin Core – Windows Build & Run Documentation
 
-**Author:** Abhijit Rathod  
-**Environment:** Windows 10/11, MSVC, CMake, vcpkg, Qt6  
+**Author:** Abhijit Rathod
+**Environment:** Windows 10/11, MSVC, CMake, vcpkg, Qt6
 **Build Type:** Bitcoin Core (GUI + Node)
 
 ## 1. Bitcoin Core Library Dependencies
@@ -26,7 +26,7 @@
 - Qt6Widgets
 - Qt6Network
 - Qt6Svg
-- Qt6Test  
+- Qt6Test
 **Platform plugin required:** `platforms/qwindows.dll`
 
 ### 1.4 Additional Libraries
@@ -49,15 +49,15 @@ cd vcpkg
 ```
 cmake -DVCPKG_TARGET_TRIPLET=x64-windows ^
       -DBUILD_GUI=ON ^
-      -DCMAKE_TOOLCHAIN_FILE=C:/Users/Abhijit/vcpkg/scripts/buildsystems/vcpkg.cmake ^
-      -S C:/Users/Abhijit/repos/bitcoin ^
-      -B C:/Users/Abhijit/repos/bitcoin/out/build/vs2022 ^
+      -DCMAKE_TOOLCHAIN_FILE=C:/Users/vcpkg/scripts/buildsystems/vcpkg.cmake ^
+      -S C:/Users/repos/bitcoin ^
+      -B C:/Users/repos/bitcoin/out/build/vs2022 ^
       -G "Visual Studio 17 2022" -A x64
 ```
 
 ### 2.3 Build Bitcoin
 ```
-cmake --build C:/Users/Abhijit/repos/bitcoin/out/build/vs2022 --config Release
+cmake --build C:/Users/bitcoin/out/build/vs2022 --config Release
 ```
 
 ## 3. Output Folder Structure
@@ -90,10 +90,10 @@ If you get:
 
 Copy:
 
-`qwindows.dll`  
+`qwindows.dll`
 from:
 ```
-C:/Users/Abhijit/vcpkg/installed/x64-windows/plugins/platforms/
+C:/Users/vcpkg/installed/x64-windows/plugins/platforms/
 ```
 into:
 ```
